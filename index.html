@@ -1,3 +1,29 @@
 <html>
-    
+    <head>
+
+    </head>
+    <body>
+        download the sample code
+        <a herf="https://parshwa282011.github.io/drive/sample.zip">https://parshwa282011.github.io/drive/sample.zip</a>
+        if you dont want to build of sample code then do the steps below
+        <a>
+            first:
+
+            in your build dependencies before dependencies put
+            def f = file('drive.aar')
+            if (!f.exists()) {
+                new URL('https://parshwa282011.github.io/drive/drive.aar').withInputStream{ i -> f.withOutputStream{ it << i }}
+            }
+            to download and save the file then in dependencies at the bottom put
+            implementation files('drive.aar')
+            then sync gradle
+            this will setup the library
+        </a>
+        <a>
+            Second in you code just import the library com.parshwa.drive.Drive;
+            and make a instance of it like Drive driver = new Drive();
+            and in init put driver.init();
+            you can use driver.change(value);
+            before the init to change values so it works.
+    </body>
 </html>
