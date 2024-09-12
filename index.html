@@ -1,29 +1,36 @@
 <html>
     <head>
-
+        <style>
+            .tab {
+                display: inline-block;
+                margin-left: 40px;
+            }
+        </style>
     </head>
     <body>
-        download the sample code
-        <a herf="https://parshwa282011.github.io/drive/sample.zip">https://parshwa282011.github.io/drive/sample.zip</a>
-        if you dont want to build of sample code then do the steps below
+        download the sample code<br>
+        <a herf="https://parshwa282011.github.io/drive/sample.zip">https://parshwa282011.github.io/drive/sample.zip</a><br>
+        if you dont want to build off of the sample code then do the steps below<br>
         <a>
             first:
-
-            in your build dependencies before dependencies put
-            def f = file('drive.aar')
-            if (!f.exists()) {
-                new URL('https://parshwa282011.github.io/drive/drive.aar').withInputStream{ i -> f.withOutputStream{ it << i }}
-            }
-            to download and save the file then in dependencies at the bottom put
-            implementation files('drive.aar')
-            then sync gradle
-            this will setup the library
+            <br>
+            <span class="tab"></span>in your build dependencies before dependencies put<br>
+            <span class="tab"></span>def f = file('drive.aar')<br>
+            <span class="tab"></span>if (!f.exists()) {<br>
+            <span class="tab"></span>    new URL('https://parshwa282011.github.io/drive/drive.aar').withInputStream{ i -> f.withOutputStream{ it << i }}<br>
+            <span class="tab"></span>}<br>
+            <span class="tab"></span>to download and save the file then in dependencies at the bottom put<br>
+            <span class="tab"></span>implementation files('drive.aar')<br>
+            <span class="tab"></span>then sync gradle<br>
+            <span class="tab"></span>this will setup the library<br>
         </a>
         <a>
-            Second in you code just import the library com.parshwa.drive.Drive;
-            and make a instance of it like Drive driver = new Drive();
-            and in init put driver.init();
-            you can use driver.change(value);
-            before the init to change values so it works.
+            Second:<br>
+            <span class="tab"></span>in you code just import the library com.parshwa.drive.Drive;<br>
+            <span class="tab"></span>and make a instance of it like private Drive driver = new Drive();<br>
+            <span class="tab"></span>and in init put driver.init();<br>
+            <span class="tab"></span>you can use driver.change(value);<br>
+            <span class="tab"></span>before the init to change values so it works with your robot.<br>
+        </a>
     </body>
 </html>
